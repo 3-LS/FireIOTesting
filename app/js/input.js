@@ -7,7 +7,7 @@
 var myFirebaseRef =  new Firebase("https://glaring-fire-5493.firebaseIO.com/AppData/");
 var nameField = $('#nameInputField');
 var colorField = $('#colorInputField');
-var result = null;
+var result = $('#result');
 
 
 /*
@@ -25,6 +25,24 @@ colorField.keypress(function (e) {
 	}
 
 });
+
+/* 
+   Message Callback operator for FB
+ */
+
+ myFirebaseRef.limit(10).on('child_added', function (snapshot) {
+ 	//Grab
+ 	var data = snapshot.val();
+ 	var name = data.name;
+ 	var color = data.colorPref;
+
+ 	var baseElement = $("<p>");
+ 	var nameElement = $("<strong></strong>");
+ 	nameElement.text(name +" " + color);
+ 	baseElement.prepend(nameElement);
+ 	
+ 	result.append(baseElement);
+ })
 
 /*
   Dumps a message to console output.
