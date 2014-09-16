@@ -36,12 +36,16 @@ colorField.keypress(function (e) {
  	var name = data.name;
  	var color = data.colorPref;
 
+ 	if (name != "") {
+
  	var baseElement = $("<p>");
  	var nameElement = $("<strong></strong>");
  	nameElement.text(name +" " + color);
  	baseElement.prepend(nameElement);
  	
  	result.append(baseElement);
+ 	}
+
  })
 
 /*
