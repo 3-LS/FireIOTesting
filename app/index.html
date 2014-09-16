@@ -8,8 +8,10 @@
   <body ng-controller="dataController">
 
     <h1>Live Data App</h1>
-    <input id="lyourName" type="text" class="form-control" name="yourName" value="" placeholder="Your Name">
 
+    <input id="nameInputField" type="text" class="form-control" name="nameInputField" value="" placeholder="Your Name">
+    <input id="colorInputField" type="text" class="form-control" name="colorInputField" value="" placeholder="Your Color">
+				<div id="result"></div>
     <script>
       var myApp = angular.module("liveDataFeed", ["firebase"]);
 
