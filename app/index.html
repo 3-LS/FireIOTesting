@@ -1,10 +1,7 @@
 <html ng-app="liveDataFeed">
   <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js'></script>
-    <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
-    <script src='https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js'></script>
-    <link rel='stylesheet' href='css/styles.css'/>
+<link rel='stylesheet' href='css/styles.css'/>
   </head>
   <body ng-controller="dataController">
 
@@ -13,16 +10,7 @@
     <input id="nameInputField" type="text" class="form-control" name="nameInputField" value="" placeholder="Your Name">
     <input id="colorInputField" type="text" class="form-control" name="colorInputField" value="" placeholder="Your Color">
 				<div id="result"></div>
-    <script>
-      var myApp = angular.module("liveDataFeed", ["firebase"]);
-
-      liveDataFeed.controller('dataController', ['$scope', '$firebase',
-        function($scope, $firebase) {
-          var ref = new Firebase("https://m0pufccavub.firebaseio-demo.com/");
-          $scope.messages = $firebase(ref).$asArray();
-        }
-      ]);
-    </script>
+    
     <script src="js/input.js"></script>
   </body>
 </html>
