@@ -1,17 +1,45 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
-<link rel='stylesheet' href='css/styles.css'/>
-  </head>
-  <body>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="ian coldwell and robert entenman">
+    <link rel="icon" href="img/favicon.ico">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+				<link rel='stylesheet' href='css/styles.css'/>
 
-    <h1>Live Data App</h1>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-    <input id="nameInputField" type="text" class="form-control" name="nameInputField" value="" placeholder="Your Name">
-    <input id="colorInputField" type="text" class="form-control" name="colorInputField" value="" placeholder="Your Color">
-				<div id="result"></div>
-    
-    <script src="js/input.js"></script>
-  </body>
+	
+</head>
+<body>
+<div class="container">
+	<h1>Live Data App</h1>
+	<form class="form-horizontal" role="form">
+		<div class="form-group">
+			<label for="nameInputField" class="col-sm-2 control-label">Name:</label>
+			<div class="col-sm-4">
+				<input id="nameInputField" type="text" class="form-control" name="nameInputField" value="" placeholder="Your Name">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="colorInputField" class="col-sm-2 control-label">Color:</label>
+			<div class="col-sm-4">
+				<input id="colorInputField" type="text" class="form-control" name="colorInputField" value="" placeholder="Your Color">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-4">
+				<button id="sendit" type="submit" class="btn btn-default">Submit</button>
+			</div>
+		</div>
+	</form>
+	<div id="result"></div>
+</div>
+	<script src="js/input.js"></script>
+</body>
 </html>
