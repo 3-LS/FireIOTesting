@@ -7,6 +7,7 @@
 var myFirebaseRef =  new FireBase("https://glaring-fire-5493.firebaseIO.com/AppData/");
 var nameField = $('#nameInputField');
 var colorField = $('#colorInputField');
+var result = null;
 
 
 /*
@@ -24,6 +25,7 @@ colorField.keypress(function (e) {
 	}
 
 });
+
 /*
   Dumps a message to console output.
 */
