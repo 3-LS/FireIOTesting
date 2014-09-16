@@ -5,6 +5,7 @@
 
 /* Globals */
 var myFirebaseRef = new FireBase("https://glaring-fire-5493.firebaseIO.com/AppData/");
+var colorDiv = $('#colorDiv');
 
 
 /*
@@ -17,6 +18,11 @@ myFirebaseRef.limit(10).on('child_added', function (snapshot) {
 	var author = data.name || "Steve Smithy";
 	var color = data.color;
 	
+	//Dump to page.
+	var messageElement = $("<h3>");
+	var nameElement = $("<strong class='color-value'></strong>");
+	nameElement.text(author);
+	messageElement.text(color).prepend(nameElement);
 
-	
-})
+	colorDiv.append(messageElement);
+});
