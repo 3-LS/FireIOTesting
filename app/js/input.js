@@ -4,14 +4,10 @@
 */
 
 /* Globals */
-var myFirebaseRef =  null;
+var myFirebaseRef =  new FireBase("https://glaring-fire-5493.firebaseIO.com/AppData/");
 var nameField = $('#nameInputField');
 var colorField = $('#colorInputField');
 
-function initFirebase() {
-	//Grabbing a reference to FireBase
-	 myFirebaseRef = new FireBase("https://glaring-fire-5493.firebaseIO.com/AppData/");
-}
 
 /*
  Traps a return/enter keypress from the colorField,
