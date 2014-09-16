@@ -36,7 +36,7 @@ colorField.keypress(function (e) {
  	var name = data.name;
  	var color = data.colorPref;
 
- 	if (name != "") {
+ 	if (name != null) {
 
  	var baseElement = $("<p>");
  	var nameElement = $("<strong></strong>");
