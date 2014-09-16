@@ -5,9 +5,11 @@
 
 /* Globals */
 var myFirebaseRef =  new Firebase("https://glaring-fire-5493.firebaseIO.com/AppData/");
+var usersRef = myFirebaseRef.child("users");
 var nameField = $('#nameInputField');
 var colorField = $('#colorInputField');
 var result = $('#result');
+
 
 
 /*
