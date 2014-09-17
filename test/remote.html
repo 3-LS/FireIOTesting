@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demo App from 3-LS">
+  <meta name="author" content="Ian Coldwell and Robert Entenman">
+  <link rel="icon" href="img/favicon.ico">
+  <title>LiveDataStream: Output Side</title>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+      <!-- Custom Styles -->
+      <link rel="stylesheet" href="css/styles.css">
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+      <!-- AngularJS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.19/angular.min.js"></script>
+
+      <!-- Firebase -->
+      <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+
+      <!-- AngularFire -->
+      <script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
+
+    </head>
+    <body ng-app="3lsApp">
+     <div  class="container" ng-controller="AppController">
+       <div class="top row">
+        <div class="col-lg-12">
+          <h1>{{details.appName}} 
+            <span class=" small text-muted">{{details.appVersion}}</span>
+          </h1>
+        </div>
+      </div>
+
+      <div class=" sub-header row">
+        <div class="col-lg-12">
+
+          <h5>Created on: {{details.appDate}} by {{details.appAuthors}}</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">    
+          <!-- all changes from Firebase magically appear here! -->
+          <h2>{{ data.name }}'s Favorite color is {{ data.color }}</h2>
+        </div>
+        <div class="row" style="background-color:{{ data.color }}; height:200px;border:solid 1px grey"></div>
+      </div>
+      <img id="logo" ng-src="{{details.appLogo}}" class="center-block img-responsive" alt="Logo">
+    </div>
+    <div class="footer">
+      <div class="container">
+        <p>Application Demo | &copy; 3-LS Innovations 2014</p>
+      </div>
+    </div>
+
+
+    <script src="js/ang-app-engine.js"></script>
+  </body>
+
+  </html>
