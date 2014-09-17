@@ -4,7 +4,7 @@
 */
 
 /* Globals */
-var myFirebaseRef =  new Firebase("https://glaring-fire-5493.firebaseIO.com/AppData/");
+var myFirebaseRef =  new Firebase("https://glaring-fire-5493.firebaseIO.com/AppData/UserPrefs/");
 var usersRef = myFirebaseRef.child("users");
 var nameField = $('#nameInputField');
 var colorField = $('#colorInputField');
